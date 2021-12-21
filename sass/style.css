@@ -26,25 +26,33 @@ header {
   text-align: center;
   /** Localisation **/
 }
+
 header .header__heading {
   height: 36px;
   padding-top: 20px;
-  box-shadow: 0px 1.5px rgba(0, 0, 0, 0.137);
+  -webkit-box-shadow: 0px 1.5px rgba(0, 0, 0, 0.137);
+          box-shadow: 0px 1.5px rgba(0, 0, 0, 0.137);
 }
+
 header .header__heading img {
   width: 145px;
 }
+
 header .location {
   background: rgba(128, 128, 128, 0.144);
   height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 header .location p {
   width: 100%;
   margin-right: 23px;
   font-size: 0.9em;
   margin-top: 12px;
 }
+
 header .location .fa-map-marker-alt {
   padding-right: 13px;
 }
@@ -55,26 +63,36 @@ header .location .fa-map-marker-alt {
   text-align: center;
   height: 275px;
 }
+
 .Explore h1 {
   padding-top: 35px;
   margin-bottom: 15px;
 }
+
 .Explore p {
   color: #838181;
   margin-bottom: 35px;
 }
+
 .Explore .btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .Explore .btn_container .btn--pink {
   font-size: 0.95em;
   width: 65%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
   height: 50px;
   border-radius: 40px;
-  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.226);
+  -webkit-box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.226);
+          box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.226);
 }
+
 .Explore .btn_container .btn--pink p {
   color: white;
   padding-top: 15px;
@@ -86,7 +104,10 @@ header .location .fa-map-marker-alt {
   padding-left: 17px;
   padding-right: 17px;
 }
+
 .function .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 25px;
   background-color: rgba(189, 189, 189, 0.219);
@@ -94,32 +115,37 @@ header .location .fa-map-marker-alt {
   width: 94.5%;
   position: relative;
   border-radius: 15px;
-  box-shadow: rgba(192, 191, 191, 0.527) 2px 4px 9px 1px;
+  -webkit-box-shadow: rgba(192, 191, 191, 0.527) 2px 4px 9px 1px;
+          box-shadow: rgba(192, 191, 191, 0.527) 2px 4px 9px 1px;
   margin-left: 17px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .function .btn > p {
   font-size: 0.95em;
   width: 80%;
   padding-left: 18px;
 }
+
 .function .btn > i {
   color: gray;
   padding-left: 28px;
   font-size: 19px;
 }
-.function .btn .fa-list-ul {
+
+.function .fa-list-ul {
   padding-left: 21px;
 }
-.function .btn .fa-store {
+
+.function .fa-store {
   color: #9356DC;
   font-size: 15px;
   padding-left: 22px;
 }
-.function .btn .active {
-  font-weight: 600;
-}
-.function .btn .numbers {
+
+.function .numbers {
   margin-left: 14px;
   background-color: #9356DC;
   border-radius: 30px;
@@ -128,8 +154,10 @@ header .location .fa-map-marker-alt {
   position: absolute;
   left: -30px;
   top: 22px;
+  font-weight: normal;
 }
-.function .btn .numbers > span {
+
+.function .numbers > span {
   padding-top: 1px;
   width: 15px;
   height: 15px;
@@ -139,8 +167,61 @@ header .location .fa-map-marker-alt {
   left: 7.6px;
   font-size: 0.9em;
 }
+
 .function .btn--one {
   margin-top: 35px;
 }
 
+.function .btn:hover > i {
+  color: #9356DC;
+}
+
+.function .btn:hover > p {
+  font-weight: bold;
+}
+
+/** Restaurant-Choice **/
+.Restaurant-Choice {
+  margin-top: 50px;
+  padding-left: 17px;
+  padding-top: 40px;
+  background: rgba(128, 128, 128, 0.151);
+}
+
+.Restaurant-Choice .title {
+  margin-bottom: 25px;
+}
+
+.Restaurant-Choice .Restaurant {
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(128, 128, 128, 0.74);
+          box-shadow: 1px 1px 15px 1px rgba(128, 128, 128, 0.74);
+  display: block;
+  width: 96%;
+  margin-top: 15px;
+}
+
+.Restaurant-Choice .Restaurant > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 150px;
+}
+
+.Restaurant-Choice .Restaurant .BottomSide {
+  height: 50px;
+  padding-left: 10px;
+}
+
+.Restaurant-Choice .Restaurant .BottomSide > p {
+  font-size: 0.92rem;
+}
+
+.Restaurant-Choice .Restaurant .BottomSide .RestaurantName {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -73,8 +73,8 @@ header{
         }
     }
 }
-/** Unknow **/
-.unknow{
+/** Fonctionnement **/
+.function{
     margin-top: 50px;
     padding-left: 17px;
     padding-right: 17px;
@@ -95,21 +95,19 @@ header{
             width: 80%;
             padding-left: 18px;
         }
-        >i{
-            color: gray;
-            padding-left: 28px;
-            font-size: 19px;
+            >i{
+                color: gray;
+                padding-left: 28px;
+                font-size: 19px;
+            }
         }
         .fa-list-ul{
             padding-left: 21px;
         }
-        .fa-store{
+        .fa-store, {
             color:#9356DC ;
             font-size: 15px;
             padding-left: 22px;
-        }
-        .active{
-            font-weight: 600;
         }
         .numbers{
             margin-left: 14px;
@@ -120,6 +118,7 @@ header{
             position: absolute;
             left: -30px;
             top: 22px;
+            font-weight: normal;
             >span{
                 padding-top: 1px;
                 width: 15px;
@@ -131,8 +130,51 @@ header{
                 font-size: 0.9em;
             }
         }
+        .btn--one{
+            margin-top: 35px;
+        }
+        .btn:hover{
+            >i{
+                color: #9356DC;
+            }
+            >p{
+                font-weight: bold;
+            }
+        }
     }
-    .btn--one{
-        margin-top: 35px;
+/** Restaurant-Choice **/ 
+.Restaurant-Choice{
+    margin-top: 50px;
+    padding-left: 17px;
+    padding-top: 40px;
+    background: rgba(128, 128, 128, 0.151);
+    .title{
+        margin-bottom: 25px;
+    }
+    .Restaurant{
+        border-radius: 20px;
+        box-shadow: 1px 1px 15px 1px rgba(128, 128, 128, 0.74);
+        display: block;
+        width: 96%;
+        margin-top: 15px;
+    >img{
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 150px;
+    }
+    .BottomSide{
+        height: 50px;
+        padding-left: 10px;
+        >p{
+            font-size: 0.92rem;
+        }
+        .RestaurantName{
+            font-weight: bold;
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+        }
     }
 }
