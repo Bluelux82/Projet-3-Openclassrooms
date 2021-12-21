@@ -197,10 +197,10 @@ header .location .fa-map-marker-alt {
   border-radius: 20px;
   -webkit-box-shadow: 1px 1px 15px 1px rgba(128, 128, 128, 0.74);
           box-shadow: 1px 1px 15px 1px rgba(128, 128, 128, 0.74);
-  display: block;
   width: 96%;
   margin-top: 15px;
   position: relative;
+  display: block;
 }
 
 .Restaurant-Choice .Restaurant > img {
@@ -215,6 +215,12 @@ header .location .fa-map-marker-alt {
 .Restaurant-Choice .Restaurant .BottomSide {
   height: 50px;
   padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .Restaurant-Choice .Restaurant .BottomSide > p {
@@ -240,5 +246,34 @@ header .location .fa-map-marker-alt {
   text-align: center;
   padding-top: 7px;
   font-size: 0.92em;
+}
+
+.Restaurant-Choice .Restaurant .fa-stack {
+  margin-top: 10px;
+  margin-right: 18px;
+  width: 8%;
+  height: 20px;
+}
+
+.Restaurant-Choice .Restaurant .fa-stack .empty-heart {
+  font-size: 20px;
+  width: auto;
+  height: 20px;
+}
+
+.Restaurant-Choice .Restaurant .fa-stack .fill-heart {
+  font-size: 20px;
+  opacity: 0;
+  color: #9356DC;
+  width: auto;
+  height: 20px;
+}
+
+.Restaurant-Choice .Restaurant .fa-stack:hover .empty-heart {
+  opacity: 0;
+}
+
+.Restaurant-Choice .Restaurant .fa-stack:hover .fill-heart {
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
