@@ -201,6 +201,8 @@ header .location .fa-map-marker-alt {
   margin-top: 15px;
   position: relative;
   display: block;
+  /** Restaurant-Choice -> Bottom-Side **/
+  /** Bottom-side -> Heart icon **/
 }
 
 .Restaurant-Choice .Restaurant > img {
@@ -213,7 +215,7 @@ header .location .fa-map-marker-alt {
 }
 
 .Restaurant-Choice .Restaurant .BottomSide {
-  height: 50px;
+  height: 55px;
   padding-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
