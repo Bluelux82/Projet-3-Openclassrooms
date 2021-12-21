@@ -200,6 +200,7 @@ header .location .fa-map-marker-alt {
   display: block;
   width: 96%;
   margin-top: 15px;
+  position: relative;
 }
 
 .Restaurant-Choice .Restaurant > img {
@@ -217,12 +218,27 @@ header .location .fa-map-marker-alt {
 }
 
 .Restaurant-Choice .Restaurant .BottomSide > p {
+  margin-top: 2px;
   font-size: 0.92rem;
 }
 
 .Restaurant-Choice .Restaurant .BottomSide .RestaurantName {
   font-weight: bold;
   font-size: 0.95rem;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+
+.Restaurant-Choice .Restaurant .New {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: #84c5b2;
+  color: green;
+  border-radius: 3px;
+  width: 85px;
+  height: 24px;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 0.92em;
 }
 /*# sourceMappingURL=style.css.map */
