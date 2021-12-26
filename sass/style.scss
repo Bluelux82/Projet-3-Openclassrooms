@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 body{
     margin: 0;
 }
@@ -9,7 +9,11 @@ a{
 }
 *{
     font-family: Roboto;
+    font-weight: 400;
+}h1{
+    font-weight: 500;
 }
+
 p,li,h1,ul{
     margin: 0;
     padding: 0;
@@ -52,6 +56,7 @@ header{
     h1{
         padding-top: 35px;
         margin-bottom:15px ;
+        font-size: 1.5rem;
     }
     p{
         color: rgb(131, 129, 129);
@@ -149,6 +154,7 @@ header{
     padding-left: 17px;
     padding-top: 40px;
     background: rgba(128, 128, 128, 0.068);
+    height: 990px;
     .title{
         margin-bottom: 25px;
     }
@@ -223,5 +229,40 @@ header{
                 opacity: 1;
             }
         }
+    }
+}
+/** Footer **/
+footer{
+    background: rgb(53, 53, 53);
+    >img{
+        width: 30%;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        margin-left: 20px;
+        
+    }
+    /** Footer list **/
+    ul{
+        padding-left: 20px;
+        list-style-type:none;
+        .one, .two, .three{
+            margin-bottom: 7px;
+        }
+        li{
+
+            a{
+                color: white;
+                font-size: 14.5px;
+                i{
+                    margin-right: 10px;
+                    font-size: 15px;
+                    width: 15px;
+                }
+                .fa-hands-helping{
+                    font-size: 12px;
+                }
+            }
+        }
+
     }
 }

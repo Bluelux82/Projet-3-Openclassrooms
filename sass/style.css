@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 body {
   margin: 0;
 }
@@ -11,6 +11,11 @@ a {
 
 * {
   font-family: Roboto;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500;
 }
 
 p, li, h1, ul {
@@ -68,6 +73,7 @@ header .location .fa-map-marker-alt {
 .Explore h1 {
   padding-top: 35px;
   margin-bottom: 15px;
+  font-size: 1.5rem;
 }
 
 .Explore p {
@@ -187,6 +193,7 @@ header .location .fa-map-marker-alt {
   padding-left: 17px;
   padding-top: 40px;
   background: rgba(128, 128, 128, 0.068);
+  height: 990px;
 }
 
 .Restaurant-Choice .title {
@@ -277,5 +284,42 @@ header .location .fa-map-marker-alt {
 
 .Restaurant-Choice .Restaurant .fa-stack:hover .fill-heart {
   opacity: 1;
+}
+
+/** Footer **/
+footer {
+  background: #353535;
+  /** Footer list **/
+}
+
+footer > img {
+  width: 30%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+}
+
+footer ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+footer ul .one, footer ul .two, footer ul .three {
+  margin-bottom: 7px;
+}
+
+footer ul li a {
+  color: white;
+  font-size: 14.5px;
+}
+
+footer ul li a i {
+  margin-right: 10px;
+  font-size: 15px;
+  width: 15px;
+}
+
+footer ul li a .fa-hands-helping {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
