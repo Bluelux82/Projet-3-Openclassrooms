@@ -27,6 +27,65 @@ p, li, h1, ul {
   font-size: 1.35em;
 }
 
+/** Loading spinner **/
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  animation: backgroundspin 4s alternate-reverse;
+  width: 100%;
+  position: absolute;
+}
+
+.loading::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 10px solid #dddddd;
+  border-top-color: #9356DC;
+  border-radius: 50%;
+  -webkit-animation: loading 4s ease;
+          animation: loading 4s ease;
+  visibility: hidden;
+}
+
+@-webkit-keyframes loading {
+  to {
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
+    visibility: visible;
+  }
+}
+
+@keyframes loading {
+  to {
+    -webkit-transform: rotate(3turn);
+            transform: rotate(3turn);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes backgroundspin {
+  to {
+    background: rgba(128, 128, 128, 0.466);
+    height: 100%;
+  }
+}
+
+@keyframes backgroundspin {
+  to {
+    background: rgba(128, 128, 128, 0.466);
+    height: 100%;
+  }
+}
+
 /** Header **/
 header {
   text-align: center;
