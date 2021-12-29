@@ -269,7 +269,7 @@ header .location .fa-map-marker-alt {
   margin-top: 50px;
   padding-left: 17px;
   padding-top: 40px;
-  background: rgba(128, 128, 128, 0.068);
+  background: rgba(94, 88, 88, 0.068);
   height: 990px;
 }
 
@@ -351,7 +351,6 @@ header .location .fa-map-marker-alt {
   font-size: 20px;
   opacity: 0;
   width: auto;
-  color: linear-gradient(to bottom right, #FF79DA, #9356DC);
   height: 20px;
 }
 
