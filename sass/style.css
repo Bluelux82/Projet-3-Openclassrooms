@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 body {
   margin: 0;
+  animation: scrollblock 4s alternate-reverse;
 }
 
 a {
@@ -42,6 +43,7 @@ p, li, h1, ul {
   animation: backgroundspin 4s alternate-reverse;
   width: 100%;
   position: absolute;
+  z-index: 9999;
 }
 
 .loading::after {
@@ -83,6 +85,18 @@ p, li, h1, ul {
   to {
     background: rgba(128, 128, 128, 0.466);
     height: 100%;
+  }
+}
+
+@-webkit-keyframes scrollblock {
+  to {
+    overflow: hidden;
+  }
+}
+
+@keyframes scrollblock {
+  to {
+    overflow: hidden;
   }
 }
 
@@ -150,7 +164,7 @@ header .location .fa-map-marker-alt {
 
 .Explore .btn_container .btn--pink {
   font-size: 0.95em;
-  width: 65%;
+  width: 205px;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   height: 50px;
@@ -236,6 +250,10 @@ header .location .fa-map-marker-alt {
 
 .function .btn--one {
   margin-top: 35px;
+}
+
+.function .btn:hover {
+  background-color: #9256dc25;
 }
 
 .function .btn:hover > i {
@@ -332,8 +350,8 @@ header .location .fa-map-marker-alt {
 .Restaurant-Choice .Restaurant .fa-stack .fill-heart {
   font-size: 20px;
   opacity: 0;
-  color: #9356DC;
   width: auto;
+  color: linear-gradient(to bottom right, #FF79DA, #9356DC);
   height: 20px;
 }
 
@@ -343,17 +361,20 @@ header .location .fa-map-marker-alt {
 
 .Restaurant-Choice .Restaurant .fa-stack:hover .fill-heart {
   opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /** Footer **/
 footer {
   background: #353535;
-  height: 172px;
+  height: auto;
   /** Footer list **/
 }
 
 footer > img {
-  width: 30%;
+  width: 110px;
   margin-top: 20px;
   margin-bottom: 15px;
   margin-left: 20px;

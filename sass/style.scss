@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 body{
     margin: 0;
+    animation: scrollblock 4s alternate-reverse;
 }
 a{
     text-decoration: none;
@@ -30,6 +31,7 @@ p,li,h1,ul{
     animation: backgroundspin 4s alternate-reverse;
     width: 100%;
     position: absolute;
+    z-index: 9999;
 
 }
 .loading::after{
@@ -52,6 +54,11 @@ p,li,h1,ul{
     to{
         background: rgba(128, 128, 128, 0.466);
         height: 100%;
+    }
+}
+@keyframes scrollblock {
+    to{
+        overflow: hidden;
     }
 }
 /** Header **/
@@ -100,7 +107,7 @@ header{
         justify-content: space-around;
         .btn--pink{
             font-size: 0.95em;
-            width: 65%;
+            width: 205px;
             background-image: linear-gradient(to bottom right,#FF79DA,#9356DC);
             height: 50px;
             border-radius: 40px;
@@ -173,6 +180,7 @@ header{
             margin-top: 35px;
         }
         .btn:hover{
+            background-color:#9256dc25 ;
             >i{
                 color: #9356DC;
             }
@@ -241,6 +249,7 @@ header{
             width: 8%;
             height: 20px;
             
+            
             .empty-heart{
                 font-size: 20px;
                 width: auto;
@@ -249,8 +258,8 @@ header{
             .fill-heart{
                 font-size: 20px;
                 opacity: 0;
-                color: #9356DC;
                 width: auto;
+                color: linear-gradient(to bottom right,#FF79DA,#9356DC);
                 height: 20px;
             }
         }
@@ -260,6 +269,9 @@ header{
             }
             .fill-heart {
                 opacity: 1;
+                background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
@@ -267,9 +279,9 @@ header{
 /** Footer **/
 footer{
     background: rgb(53, 53, 53);
-    height: 172px;
+    height: auto;
     >img{
-        width: 30%;
+        width: 110px;
         margin-top: 20px;
         margin-bottom: 15px;
         margin-left: 20px;
