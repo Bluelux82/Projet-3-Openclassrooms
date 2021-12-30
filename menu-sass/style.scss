@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 body{
     margin: 0;
 }
@@ -6,24 +7,32 @@ h1{
     font-family: Roboto;
     font-weight: 500;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
+p{
+    font-family: Roboto;
+    font-weight: 400;
+}
 /** Header **/
 header{
     display: flex;
     width: 100%;
     align-items: center;
     height: 63px;
+    justify-content: center;
     a{
         padding-top: 6px;
-        margin-left: 15px;
-        margin-right: 47px;
         color: black;
         font-size: 20px;
     }
     .header__heading{
         padding-top: 12px;
+        width: 80%;
+        text-align: center;
         img{
-        width: 165px;
-
+        width: 170px;
         }
     }
 }
@@ -32,9 +41,161 @@ header{
     display: flex;
     align-items: center;
     img{
-    max-width: 100%;
+    width: 100%;
     height: 265px;
     object-fit: cover;
     
+    }
+}
+/** Section-Menu **/
+.menu{
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    top: 270px;
+    background: white;
+    border-radius: 35px;
+    .title{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 50px;
+        >h1{
+            width: 70%;
+            font-size: 1.7em;
+            font-family: Shrikhand;
+            margin-top:5px;
+            margin-bottom: 0;
+        }
+        /** Hearth icon **/
+        >a{
+            margin-right: 10px;
+            font-size: 20.5px;
+        }
+        .fa-stack{
+            width: 25px;
+            height: 20px;
+            margin-bottom: 7px;
+        }
+        .fill-heart{
+            opacity: 0;
+        }
+        .fa-stack:hover {
+            .empty-heart {
+                opacity: 0;
+            }
+            .fill-heart {
+                opacity: 1;
+                background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    /** Entrance **/
+    .first{
+        margin-top: 20px;
+    }
+    .second, .last{
+        margin-top: 37px;
+    }
+    .entrance{
+        margin-left: 13px;
+        .text-border{
+            text-transform: uppercase;
+            position: relative;
+            border-bottom: 3px solid rgb(35, 217, 241);
+            width: 41px;
+        }
+        .one, .two{
+            margin-bottom: 14px;
+        }
+        .entrance-container{
+            display: flex;
+            margin-right: 13px;
+            background: rgb(255, 255, 255);
+            box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.199);
+            border-radius: 10px;
+            height: 65px;
+            .entrance-leftside{
+                width: 65%;
+                padding-top: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-left: 10px;
+                transition: width 0.5s;
+                p{
+                    margin-bottom: 0;
+                    margin-top: 5px;
+                    font-size: 0.95em;
+                    letter-spacing:-0.5px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                .entrance-boldtext{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-weight: 500;
+                    margin:0;
+                    font-size: 1.1em;
+
+                }
+            }
+            .entrance-rightside{
+                width: 35%;
+                line-height: 4.5em;
+                display: flex;
+                justify-content: flex-end;
+                transition: width 0.5s;
+                >p{
+                    margin: 0;
+                    font-size: 0.95em;
+                    font-weight: 500;
+                    text-align: end;
+                    padding-top: 9px;
+                    padding-right: 16px;
+                    
+                }
+                /** CheckAnimation **/
+                    .fa-check-circle{
+                        display:flex;
+                        background: #99e2d0;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        height: 100%;
+                        width: 0px;
+                        transition: width 0.4s;
+                        transition-timing-function: ease-in-out;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 24px;
+                        overflow: hidden;
+                    }
+                    .fa-check-circle:before{
+                        transition-duration: 0.4s;
+                        color: white;
+                    }
+            }
+        }
+        .entrance-container:hover{
+            .entrance-leftside{
+                width: 60%;
+            }
+            .entrance-rightside{
+                width: 40%;
+            }
+                .fa-check-circle{
+                    visibility: visible;
+                    width: 58px;
+                }
+                .fa-check-circle:before{
+                    visibility: visible;
+                    transform: rotate(1turn);
+                }
+        }
     }
 }

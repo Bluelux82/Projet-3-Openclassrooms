@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body {
   margin: 0;
 }
@@ -6,6 +7,16 @@ body {
 h1 {
   font-family: Roboto;
   font-weight: 500;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 400;
 }
 
 /** Header **/
@@ -18,22 +29,25 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 63px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header a {
   padding-top: 6px;
-  margin-left: 15px;
-  margin-right: 47px;
   color: black;
   font-size: 20px;
 }
 
 header .header__heading {
   padding-top: 12px;
+  width: 80%;
+  text-align: center;
 }
 
 header .header__heading img {
-  width: 165px;
+  width: 170px;
 }
 
 /** Restaurant-Preview **/
@@ -47,9 +61,204 @@ header .header__heading img {
 }
 
 .restaurant-preview img {
-  max-width: 100%;
+  width: 100%;
   height: 265px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/** Section-Menu **/
+.menu {
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  top: 270px;
+  background: white;
+  border-radius: 35px;
+  /** Entrance **/
+}
+
+.menu .title {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 50px;
+  /** Hearth icon **/
+}
+
+.menu .title > h1 {
+  width: 70%;
+  font-size: 1.7em;
+  font-family: Shrikhand;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.menu .title > a {
+  margin-right: 10px;
+  font-size: 20.5px;
+}
+
+.menu .title .fa-stack {
+  width: 25px;
+  height: 20px;
+  margin-bottom: 7px;
+}
+
+.menu .title .fill-heart {
+  opacity: 0;
+}
+
+.menu .title .fa-stack:hover .empty-heart {
+  opacity: 0;
+}
+
+.menu .title .fa-stack:hover .fill-heart {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu .first {
+  margin-top: 20px;
+}
+
+.menu .second, .menu .last {
+  margin-top: 37px;
+}
+
+.menu .entrance {
+  margin-left: 13px;
+}
+
+.menu .entrance .text-border {
+  text-transform: uppercase;
+  position: relative;
+  border-bottom: 3px solid #23d9f1;
+  width: 41px;
+}
+
+.menu .entrance .one, .menu .entrance .two {
+  margin-bottom: 14px;
+}
+
+.menu .entrance .entrance-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 13px;
+  background: white;
+  -webkit-box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.199);
+          box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.199);
+  border-radius: 10px;
+  height: 65px;
+}
+
+.menu .entrance .entrance-container .entrance-leftside {
+  width: 65%;
+  padding-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 10px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.menu .entrance .entrance-container .entrance-leftside p {
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 0.95em;
+  letter-spacing: -0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu .entrance .entrance-container .entrance-leftside .entrance-boldtext {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 500;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.menu .entrance .entrance-container .entrance-rightside {
+  width: 35%;
+  line-height: 4.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+  /** CheckAnimation **/
+}
+
+.menu .entrance .entrance-container .entrance-rightside > p {
+  margin: 0;
+  font-size: 0.95em;
+  font-weight: 500;
+  text-align: end;
+  padding-top: 9px;
+  padding-right: 16px;
+}
+
+.menu .entrance .entrance-container .entrance-rightside .fa-check-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #99e2d0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100%;
+  width: 0px;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 24px;
+  overflow: hidden;
+}
+
+.menu .entrance .entrance-container .entrance-rightside .fa-check-circle:before {
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  color: white;
+}
+
+.menu .entrance .entrance-container:hover .entrance-leftside {
+  width: 60%;
+}
+
+.menu .entrance .entrance-container:hover .entrance-rightside {
+  width: 40%;
+}
+
+.menu .entrance .entrance-container:hover .fa-check-circle {
+  visibility: visible;
+  width: 58px;
+}
+
+.menu .entrance .entrance-container:hover .fa-check-circle:before {
+  visibility: visible;
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
 }
 /*# sourceMappingURL=style.css.map */
