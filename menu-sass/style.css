@@ -159,8 +159,6 @@ header .header__heading img {
           box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.199);
   border-radius: 10px;
   height: 65px;
-  /** Block leftside **/
-  /** Block rightside **/
 }
 
 .menu .entrance .entrance-container .entrance-leftside {
