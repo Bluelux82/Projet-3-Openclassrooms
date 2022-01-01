@@ -111,6 +111,7 @@ header{
             border-bottom: 3px solid rgb(35, 217, 241);
             width: 41px;
         }
+        }
         .one, .two{
             margin-bottom: 14px;
         }
@@ -226,7 +227,6 @@ header{
             }
         }
     }
-}
 /** Footer **/
 footer{
     background: rgb(53, 53, 53);
@@ -263,5 +263,53 @@ footer{
             }
         }
 
+    }
+}
+/** Top to bottom apparition **/
+.apparition-1, .apparition-2, .apparition-3, .apparition-4,
+.apparition-5, .apparition-6, .apparition-7,.apparition-8,
+.apparition-9, .apparition-10{
+    visibility: hidden;
+    animation: apparition 0.75s;
+    animation-fill-mode: forwards;
+}
+.apparition-1{
+    animation-delay: .3s;
+}
+.apparition-2{
+    animation-delay: .5s;
+}
+.apparition-3{
+    animation-delay: .7s;
+}
+.apparition-4{
+    animation-delay: .9s;
+}
+.apparition-5{
+    animation-delay: 1.1s;
+}
+.apparition-6{
+    animation-delay: 1.3s;
+}
+.apparition-7{
+    animation-delay: 1.5s;
+}
+.apparition-8{
+    animation-delay: 1.7s;
+}
+.apparition-9{
+    animation-delay: 1.9s;
+}
+.apparition-10{
+    animation-delay: 2.1s;
+}
+@keyframes apparition {
+    from{
+        visibility: hidden;
+        transform: rotateX(-50deg);
+    }
+    to{
+        visibility: visible;
+        transform: rotateX(0);
     }
 }
