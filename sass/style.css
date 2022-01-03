@@ -349,20 +349,44 @@ header .location .fa-map-marker-alt {
 
 .Restaurant-Choice .Restaurant .fa-stack .fill-heart {
   font-size: 20px;
-  opacity: 0;
   width: auto;
-  height: 20px;
+  height: 0px;
+  opacity: 0;
 }
 
 .Restaurant-Choice .Restaurant .fa-stack:hover .empty-heart {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   opacity: 0;
 }
 
 .Restaurant-Choice .Restaurant .fa-stack:hover .fill-heart {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-animation: 0.6s ease-in 0s alternate forwards hearthfill;
+          animation: 0.6s ease-in 0s alternate forwards hearthfill;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+@-webkit-keyframes hearthfill {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@keyframes hearthfill {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 20px;
+  }
 }
 
 /** Footer **/
