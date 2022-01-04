@@ -195,13 +195,13 @@ header{
         }
     }
 }
-/** Restaurant-Choice **/ 
+/** Restaurant-Choice **/
 .Restaurant-Choice{
     margin-top: 50px;
     padding-left: 17px;
     padding-top: 40px;
     background: rgba(94, 88, 88, 0.068);
-    height: 990px;
+    height: 1150px;
     .title{
         margin-bottom: 25px;
     }
@@ -212,21 +212,23 @@ header{
         margin-top: 15px;
         position: relative;
         display: block;
+        height: 245px;
     >img{
         width: 100%;
         object-fit: cover;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        height: 150px;
+        height: 180px;
+        overflow: hidden;
     }
     /** Restaurant-Choice -> Bottom-Side **/
     .BottomSide{
-        height: 55px;
-        padding-left: 10px;
+        height: 65px;
+        padding-left: 15px;
         display: flex;
         justify-content: space-between;
         >p{
-            margin-top: 2px;
+            margin-top: 5px;
             font-size: 0.92rem;
         }
         .RestaurantName{
@@ -250,19 +252,19 @@ header{
         }
         /** Bottom-side -> Heart icon **/
         .fa-stack{
-            margin-top: 10px;
+            margin-top: 15px;
             margin-right: 18px;
             width: 8%;
             height: 20px;
             
             
             .empty-heart{
-                font-size: 20px;
+                font-size: 22px;
                 width: auto;
                 height: 20px;
             }
             .fill-heart{
-                font-size: 20px;
+                font-size: 22px;
                 width: auto;
                 height: 0px;
                 opacity: 0;
@@ -270,17 +272,37 @@ header{
         }
         .fa-stack:hover {
             .empty-heart {
-                transition-duration: 0.5s;
+                transition-duration: 0.7s;
                 opacity: 0;
             }
             .fill-heart {
-                animation: 0.6s ease-in 0s alternate forwards hearthfill;
+                animation: 0.4s ease-in 0s alternate forwards hearthfill;
                 animation-fill-mode:forwards ;
                 background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 opacity: 1;
             }
+        }
+    }
+    .card--1{
+        >img{
+            object-position: 0px -35px;
+        }
+    }
+    .card--2{
+        >img{
+            object-position: 0px -135px;
+        }
+    }
+    .card--3{
+        >img{
+            object-position: 0px -50px;
+        }
+    }
+    .card--4{
+        >img{
+            object-position: 0px -35px;
         }
     }
 }

@@ -96,7 +96,7 @@ header .header__heading img {
 }
 
 .menu .title > h1 {
-  width: 70%;
+  width: 75%;
   font-size: 1.8em;
   font-family: Shrikhand;
   margin-top: 5px;
@@ -184,12 +184,15 @@ header .header__heading img {
           box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.199);
   border-radius: 10px;
   height: 65px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   /** Block leftside **/
   /** Block rightside **/
 }
 
 .menu .entrance-container .entrance-leftside {
-  width: 65%;
+  width: 80%;
   padding-top: 10px;
   overflow: hidden;
   white-space: nowrap;
@@ -202,7 +205,7 @@ header .header__heading img {
 .menu .entrance-container .entrance-leftside p {
   margin-bottom: 0;
   margin-top: 5px;
-  font-size: 0.95em;
+  font-size: 0.93em;
   letter-spacing: -0.5px;
   overflow: hidden;
   white-space: nowrap;
@@ -219,7 +222,7 @@ header .header__heading img {
 }
 
 .menu .entrance-container .entrance-rightside {
-  width: 35%;
+  width: 10%;
   line-height: 4.5em;
   display: -webkit-box;
   display: -ms-flexbox;
