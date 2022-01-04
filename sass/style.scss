@@ -218,12 +218,12 @@ header{
         object-fit: cover;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        height: 180px;
+        height: 75%;
         overflow: hidden;
     }
     /** Restaurant-Choice -> Bottom-Side **/
     .BottomSide{
-        height: 65px;
+        height: 25%;
         padding-left: 15px;
         display: flex;
         justify-content: space-between;
@@ -298,6 +298,7 @@ header{
     .card--3{
         >img{
             object-position: 0px -50px;
+            height: 180px;
         }
     }
     .card--4{

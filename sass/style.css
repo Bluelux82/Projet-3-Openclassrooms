@@ -307,12 +307,12 @@ header .location .fa-map-marker-alt {
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 180px;
+  height: 75%;
   overflow: hidden;
 }
 
 .Restaurant-Choice .Restaurant .BottomSide {
-  height: 65px;
+  height: 25%;
   padding-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,6 +397,7 @@ header .location .fa-map-marker-alt {
 .Restaurant-Choice .card--3 > img {
   -o-object-position: 0px -50px;
      object-position: 0px -50px;
+  height: 180px;
 }
 
 .Restaurant-Choice .card--4 > img {

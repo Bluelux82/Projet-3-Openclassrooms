@@ -115,13 +115,13 @@ header .header__heading img {
 }
 
 .menu .title .fa-stack .empty-heart {
-  font-size: 20px;
+  font-size: 21px;
   width: auto;
   height: 20px;
 }
 
 .menu .title .fa-stack .fill-heart {
-  font-size: 20px;
+  font-size: 21px;
   width: auto;
   height: 0px;
   opacity: 0;
@@ -376,6 +376,7 @@ footer ul li a .fa-hands-helping {
 .apparition-5, .apparition-6, .apparition-7, .apparition-8,
 .apparition-9, .apparition-10 {
   visibility: hidden;
+  margin-top: 30px;
   -webkit-animation: apparition 0.75s;
           animation: apparition 0.75s;
   -webkit-animation-fill-mode: forwards;
@@ -439,6 +440,7 @@ footer ul li a .fa-hands-helping {
             transform: rotateX(-50deg);
   }
   to {
+    margin-top: 0px;
     visibility: visible;
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
@@ -452,6 +454,7 @@ footer ul li a .fa-hands-helping {
             transform: rotateX(-50deg);
   }
   to {
+    margin-top: 0px;
     visibility: visible;
     -webkit-transform: rotateX(0);
             transform: rotateX(0);
