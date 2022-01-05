@@ -27,8 +27,7 @@ p,li,h1,ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: none;
-    animation: backgroundspin 4s alternate-reverse;
+    animation: backgroundspin 4.3s reverse;
     width: 100%;
     position: absolute;
     z-index: 9999;
@@ -39,12 +38,12 @@ p,li,h1,ul{
     width: 50px;
     height: 50px;
     border: 10px solid #dddddd;
-    border-top-color: #9356DC;
+    border-top-color:#9356DC;
     border-radius: 50%;
-    animation: loading 4s ease;
+    animation: spinner 3s linear backwards;
     visibility: hidden;
 }
-@keyframes loading {
+@keyframes spinner {
     to{
         transform: rotate(3turn);
         visibility: visible;
@@ -213,30 +212,15 @@ header{
         position: relative;
         display: block;
         height: 245px;
-    >img{
-        width: 100%;
-        object-fit: cover;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        height: 75%;
-        overflow: hidden;
+        >img{
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            height: 75%;
+            overflow: hidden;
     }
-    /** Restaurant-Choice -> Bottom-Side **/
-    .BottomSide{
-        height: 25%;
-        padding-left: 15px;
-        display: flex;
-        justify-content: space-between;
-        >p{
-            margin-top: 5px;
-            font-size: 0.92rem;
-        }
-        .RestaurantName{
-            font-weight: bold;
-            font-size: 0.95rem;
-            margin-top: 8px;
-        }
-        }
+        /** Bannière Nouveau **/
         .New{
             position: absolute;
             right: 10px;
@@ -250,14 +234,28 @@ header{
             padding-top: 7px;
             font-size: 0.92em;
         }
-        /** Bottom-side -> Heart icon **/
+        /** Restaurant-Choice -> Bottom-Side **/
+        .BottomSide{
+            height: 25%;
+            padding-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            >p{
+                margin-top: 5px;
+                font-size: 0.92rem;
+            }
+            .RestaurantName{
+                font-weight: bold;
+                font-size: 0.95rem;
+                margin-top: 8px;
+            }
+        }
+        /** Heart icon **/
         .fa-stack{
             margin-top: 15px;
             margin-right: 18px;
             width: 8%;
             height: 20px;
-            
-            
             .empty-heart{
                 font-size: 22px;
                 width: auto;
@@ -268,23 +266,31 @@ header{
                 width: auto;
                 height: 0px;
                 opacity: 0;
+                color: transparent;
             }
         }
-        .fa-stack:hover {
+        .fa-stack:hover{
             .empty-heart {
                 transition-duration: 0.7s;
                 opacity: 0;
             }
             .fill-heart {
                 animation: 0.4s ease-in 0s alternate forwards hearthfill;
-                animation-fill-mode:forwards ;
                 background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
                 opacity: 1;
             }
         }
+        @keyframes hearthfill {
+            from{
+                    height: 0px;
+            }
+            to{
+                    height: 20px;
+            }
+        }
     }
+    /** Positionning Restaurant image **/
     .card--1{
         >img{
             object-position: 0px -35px;
@@ -305,14 +311,6 @@ header{
         >img{
             object-position: 0px -35px;
         }
-    }
-}
-@keyframes hearthfill {
-    from{
-            height: 0px;
-    }
-    to{
-            height: 20px;
     }
 }
 /** Footer **/

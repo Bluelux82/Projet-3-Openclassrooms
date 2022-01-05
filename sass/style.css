@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 body {
   margin: 0;
@@ -39,8 +40,7 @@ p, li, h1, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: none;
-  animation: backgroundspin 4s alternate-reverse;
+  animation: backgroundspin 4.3s reverse;
   width: 100%;
   position: absolute;
   z-index: 9999;
@@ -53,12 +53,12 @@ p, li, h1, ul {
   border: 10px solid #dddddd;
   border-top-color: #9356DC;
   border-radius: 50%;
-  -webkit-animation: loading 4s ease;
-          animation: loading 4s ease;
+  -webkit-animation: spinner 3s linear backwards;
+          animation: spinner 3s linear backwards;
   visibility: hidden;
 }
 
-@-webkit-keyframes loading {
+@-webkit-keyframes spinner {
   to {
     -webkit-transform: rotate(3turn);
             transform: rotate(3turn);
@@ -66,7 +66,7 @@ p, li, h1, ul {
   }
 }
 
-@keyframes loading {
+@keyframes spinner {
   to {
     -webkit-transform: rotate(3turn);
             transform: rotate(3turn);
@@ -282,6 +282,7 @@ header .location .fa-map-marker-alt {
   padding-top: 40px;
   background: rgba(94, 88, 88, 0.068);
   height: 1150px;
+  /** Positionning Restaurant image **/
 }
 
 .Restaurant-Choice .title {
@@ -297,8 +298,9 @@ header .location .fa-map-marker-alt {
   position: relative;
   display: block;
   height: 245px;
+  /** Bannière Nouveau **/
   /** Restaurant-Choice -> Bottom-Side **/
-  /** Bottom-side -> Heart icon **/
+  /** Heart icon **/
 }
 
 .Restaurant-Choice .Restaurant > img {
@@ -309,6 +311,20 @@ header .location .fa-map-marker-alt {
   border-top-right-radius: 20px;
   height: 75%;
   overflow: hidden;
+}
+
+.Restaurant-Choice .Restaurant .New {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: #84c5b2;
+  color: green;
+  border-radius: 3px;
+  width: 85px;
+  height: 24px;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 0.92em;
 }
 
 .Restaurant-Choice .Restaurant .BottomSide {
@@ -333,20 +349,6 @@ header .location .fa-map-marker-alt {
   margin-top: 8px;
 }
 
-.Restaurant-Choice .Restaurant .New {
-  position: absolute;
-  right: 10px;
-  top: 15px;
-  background: #84c5b2;
-  color: green;
-  border-radius: 3px;
-  width: 85px;
-  height: 24px;
-  text-align: center;
-  padding-top: 7px;
-  font-size: 0.92em;
-}
-
 .Restaurant-Choice .Restaurant .fa-stack {
   margin-top: 15px;
   margin-right: 18px;
@@ -365,6 +367,7 @@ header .location .fa-map-marker-alt {
   width: auto;
   height: 0px;
   opacity: 0;
+  color: transparent;
 }
 
 .Restaurant-Choice .Restaurant .fa-stack:hover .empty-heart {
@@ -376,12 +379,27 @@ header .location .fa-map-marker-alt {
 .Restaurant-Choice .Restaurant .fa-stack:hover .fill-heart {
   -webkit-animation: 0.4s ease-in 0s alternate forwards hearthfill;
           animation: 0.4s ease-in 0s alternate forwards hearthfill;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
   background: -webkit-gradient(linear, left bottom, left top, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   opacity: 1;
+}
+
+@-webkit-keyframes hearthfill {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 20px;
+  }
+}
+
+@keyframes hearthfill {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 20px;
+  }
 }
 
 .Restaurant-Choice .card--1 > img {
@@ -403,24 +421,6 @@ header .location .fa-map-marker-alt {
 .Restaurant-Choice .card--4 > img {
   -o-object-position: 0px -35px;
      object-position: 0px -35px;
-}
-
-@-webkit-keyframes hearthfill {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 20px;
-  }
-}
-
-@keyframes hearthfill {
-  from {
-    height: 0px;
-  }
-  to {
-    height: 20px;
-  }
 }
 
 /** Footer **/
