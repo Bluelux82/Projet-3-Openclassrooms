@@ -185,16 +185,16 @@ header{
                 }
                 /** CheckAnimation **/
                     .fa-check-circle{
-                        display:flex;
                         background: #99e2d0;
-                        border-top-right-radius: 10px;
-                        border-bottom-right-radius: 10px;
                         height: 100%;
                         width: 0px;
-                        transition: width 0.4s;
-                        transition-timing-function: ease-in-out;
+                        display:flex;
                         align-items: center;
                         justify-content: center;
+                        border-top-right-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        transition: width 0.4s;
+                        transition-timing-function: ease-in-out;
                         font-size: 24px;
                         overflow: hidden;
                     }
@@ -212,11 +212,9 @@ header{
                 width: 40%;
             }
                 .fa-check-circle{
-                    visibility: visible;
                     width: 58px;
                 }
                 .fa-check-circle:before{
-                    visibility: visible;
                     transform: rotate(1turn);
                 }
         }
@@ -291,7 +289,7 @@ footer{
 .apparition-5, .apparition-6, .apparition-7,.apparition-8,
 .apparition-9, .apparition-10{
     visibility: hidden;
-    margin-top: 30px;
+    margin-top: 20px;
     animation: apparition 0.75s;
     animation-fill-mode: forwards;
 }

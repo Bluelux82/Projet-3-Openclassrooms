@@ -245,24 +245,24 @@ header .header__heading img {
 }
 
 .menu .entrance-container .entrance-rightside .fa-check-circle {
+  background: #99e2d0;
+  height: 100%;
+  width: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #99e2d0;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  height: 100%;
-  width: 0px;
-  -webkit-transition: width 0.4s;
-  transition: width 0.4s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-transition: width 0.4s;
+  transition: width 0.4s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
   font-size: 24px;
   overflow: hidden;
 }
@@ -282,12 +282,10 @@ header .header__heading img {
 }
 
 .menu .entrance-container:hover .fa-check-circle {
-  visibility: visible;
   width: 58px;
 }
 
 .menu .entrance-container:hover .fa-check-circle:before {
-  visibility: visible;
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
 }
@@ -376,7 +374,7 @@ footer ul li a .fa-hands-helping {
 .apparition-5, .apparition-6, .apparition-7, .apparition-8,
 .apparition-9, .apparition-10 {
   visibility: hidden;
-  margin-top: 30px;
+  margin-top: 20px;
   -webkit-animation: apparition 0.75s;
           animation: apparition 0.75s;
   -webkit-animation-fill-mode: forwards;
